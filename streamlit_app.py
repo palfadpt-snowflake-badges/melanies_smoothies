@@ -1,5 +1,6 @@
 # Import python packages
 import streamlit as st
+import requests
 from snowflake.snowpark.functions import col
 
 # Write directly to the app
@@ -44,10 +45,10 @@ if ingredients_list:
       #working before  
       ingredients_string += fruit_chosen + ' '
 
-#   #API call
-# import requests  
-#     smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
-#     st.text(smoothiefroot_response).json()
+
+      smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
+      st.text(smoothiefroot_response.json())
+  
      
     # st.write(ingredients_string)
 
