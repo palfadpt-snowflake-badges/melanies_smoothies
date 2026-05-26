@@ -31,9 +31,6 @@ ingredients_list = st.multiselect(
 )
 
 
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
-#st.text(smoothiefroot_response.json())
-sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width = True)
 
 if len(ingredients_list) > 5:
     st.error('Please select no more than 5 ingredients.')
@@ -45,13 +42,11 @@ if ingredients_list:
 
     ingredients_string = ''
 
-    #working before
     for fruit_chosen in ingredients_list:
-      #working before  
       ingredients_string += fruit_chosen + ' '
-
-
-  
+      smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
+      sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width = True)
+    
      
     # st.write(ingredients_string)
 
