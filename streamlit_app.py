@@ -41,20 +41,21 @@ if ingredients_list:
     ingredients_string = ''
 
     for fruit_chosen in ingredients_list:
-        ingredients_string += fruit_chosen + ' '
+      --working before  
+      #ingredients_string += fruit_chosen + ' '
 
   #API call
-   
     smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
     st.text(smoothiefroot_response)
+    ingredients_string  = smoothiefroot_response
     # st.write(ingredients_string)
 
     # my_insert_stmt = """ insert into smoothies.public.orders(ingredients)
     #                 values ('""" + ingredients_string + """','""" + name_on_order + """')"""
 
-
-    my_insert_stmt = """ insert into smoothies.public.orders(ingredients, name_on_order)
-                    values ('""" + ingredients_string + """','""" + name_on_order + """')"""
+--working before
+    #my_insert_stmt = """ insert into smoothies.public.orders(ingredients, name_on_order)
+    #                values ('""" + ingredients_string + """','""" + name_on_order + """')"""
     
 
     # st.write(my_insert_stmt)
