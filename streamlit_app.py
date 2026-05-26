@@ -45,7 +45,7 @@ if ingredients_list:
       #ingredients_string += fruit_chosen + ' '
 
   #API call
-      import requests  
+import requests  
       smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
       st.text(smoothiefroot_response).json()
      
