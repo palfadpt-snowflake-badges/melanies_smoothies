@@ -53,7 +53,7 @@ if ingredients_list:
     # my_insert_stmt = """ insert into smoothies.public.orders(ingredients)
     #                 values ('""" + ingredients_string + """','""" + name_on_order + """')"""
 
---working before
+    #working before
     #my_insert_stmt = """ insert into smoothies.public.orders(ingredients, name_on_order)
     #                values ('""" + ingredients_string + """','""" + name_on_order + """')"""
     
