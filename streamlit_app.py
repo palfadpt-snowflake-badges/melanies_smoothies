@@ -41,7 +41,7 @@ if ingredients_list:
     ingredients_string = ''
 
     for fruit_chosen in ingredients_list:
-      --working before  
+      #working before  
       #ingredients_string += fruit_chosen + ' '
 
   #API call
